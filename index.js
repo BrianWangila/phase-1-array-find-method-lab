@@ -2,7 +2,7 @@
 const record = [
   {
     year: '2015',
-    result: "W"
+    result: "L"
   },
   {
     year: "2014",
@@ -14,21 +14,32 @@ const record = [
   }
 ]
 
-// superbowlWin = (record) => {
-//   const result = record.find( record => record.result === "W" );
-//   return !!result ? result.year : undefined;
+
+// let superbowl = record.find(superbowlWin)
+
+// function superbowlWin(record){
+//   let win = record.result === "W"
+//   for(let item of record){
+//     if(item === "W"){
+//       return record.year
+//     } else {
+//       return "undefined"
+//     }
+//   }
+  
+  
 // }
-// console.log(superbowlWin(record))
+// console.log(superbowl)
 
 function superbowlWin(record){
-  let superbowl = record.find(function(record){
-    record.result === "W";
+  let win = record.find(function(record){
+    return record.result === "W"
   })
-  !!superbowl ? record.year : undefined;
-  // if(!!superbowl){
-  //   return superbowl.year;
-  // } else{
-  // return undefined
-  // }
+  if (win){
+    return win.year;
+  }
+    return "undefined"
+  
 }
+
 console.log(superbowlWin(record))
