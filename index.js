@@ -2,7 +2,7 @@
 const record = [
   {
     year: '2015',
-    result: "L"
+    result: "W"
   },
   {
     year: "2014",
