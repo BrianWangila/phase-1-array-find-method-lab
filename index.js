@@ -35,11 +35,12 @@ function superbowlWin(record){
   let win = record.find(function(record){
     return record.result === "W"
   })
+  
+
   if (win){
     return win.year;
   }
-    return "undefined"
-  
+    return win
 }
 
 console.log(superbowlWin(record))
